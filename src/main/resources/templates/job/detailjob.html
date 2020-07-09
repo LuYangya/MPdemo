@@ -1,0 +1,84 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>人力资源管理系统</title>
+<link rel="stylesheet" rev="stylesheet" th:href="@{/css/style.css}" type="text/css" media="all" />
+<script type="text/javascript" th:src="@{/Js/typem.js}"></script>
+<script type="text/javascript" th:src="@{/Js/js.js}"></script>
+<style type="text/css">
+<!--
+.atten {font-size:12px;font-weight:normal;color:#F00;}
+-->
+</style>
+</head>
+<body class="ContentBody">
+<div class="MainDiv">
+<table width="99%" border="0" cellpadding="0" cellspacing="0" class="CContent">
+  <tr>
+      <th class="tablestyle_title" >人才详细信息</th>
+  </tr>
+
+  <tr>
+    <td class="CPanel">
+		<table border="0" cellpadding="0" cellspacing="0" style="width:80%" align="center">
+		<tr>
+			<td width="100%">
+				<fieldset style="height:100%;">
+				<table border="0" cellpadding="8" cellspacing="1" style="width:100%">
+					  <tr>
+					    <td align="right" width="9%">姓名：</td>
+					    <td width="36%" th:text="${job.getName()}"></td>
+					    <td width="20%"><div align="right">性别：</div></td>
+					    <td width="43%" th:text="${job.getName()==1 ? '男' : '女'}"></tr>
+					  <tr>
+					    <td align="right" width="9%">年龄：</td>
+					    <td th:text="${job.getSex()}"> </td>
+					    <td><div align="right">职位：</div></td>
+					    <td th:text="${job.getJob()}"></td>
+					  </tr>
+					  <tr>
+					    <td align="right">所学专业：</td>
+					    <td th:text="${job.getSpecialty()}"></td>
+					    <td><div align="right">工作经验：</div></td>
+					    <td th:text="${job.getExperience()}"> </td>
+					    </tr>
+					  <tr>
+					    <td align="right">学历：</td>
+					    <td th:text="${job.getStudyeffort()}">
+				        </td>
+					    <td><div align="right">毕业学校：</div></td>
+					    <td th:text="${job.getSchool()}"></td>
+					    </tr>
+					  <tr>
+					    <td align="right">电话：</td>
+					    <td th:text="${job.getTel()}">
+				        </td>
+					    <td><div align="right">Email：</div></td>
+					    <td th:text="${job.getEmail()}"></td>
+					    </tr>
+					  <tr>
+					    <td align="right">详细经历：</td>
+					    <td colspan="4" th:text="${job.getContent()}"></td>
+					  </tr>
+					   <tr>
+					    <td colspan="4" align="center">
+					    <a href="#" onclick="javascript:history.back();">返回</a></td>
+					  </tr>
+				</table>
+				</fieldset>		
+			</td>
+		</tr>
+		<tr>
+			<td height="22" colspan="4" align="center" >该信息不存在！！！</td>
+		</tr>
+		</table>
+	 </td>
+  </tr>
+</table>
+</div>
+</body>
+</html>
+
+
+
